@@ -1,0 +1,29 @@
+﻿<mui:ModernWindow x:Class="TimecardMUI.MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  xmlns:timecardMui="clr-namespace:TimecardMUI"
+                  Title="Delta Sigma Time Card" 
+                  Style="{StaticResource BlankWindow}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="DELTA SIGMA" Style="{StaticResource Heading1}" />
+            <TextBlock Text="TIME CARD  - V2" Style="{StaticResource Heading2}" />
+        </StackPanel>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Overview">
+                <StackPanel>
+                    <TextBlock Text="DELTA SIGMA" Style="{StaticResource Heading1}" />
+                    <TextBlock Text="TIME CARD  - V2" Style="{StaticResource Heading2}" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Timesheet">
+                <timecardMui:TimeSheet />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</mui:ModernWindow>
